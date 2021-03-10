@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Médiatèque</title>
+    <link rel="stylesheet" href="app.css">
+    <!--Librairie JavaScript pour le filtre-->
+    <script src="sort-table.js"></script>
+</head>
+
+<body>
+    <div id="msgerr">
+        Erreur dans le formulaire :
+        <ul id="errList"></ul>
+    </div>
+    <div id="success">
+        Le film a été ajouté avec succes!
+    </div>
+
+    <h1>Liste des films</h1>
+
+    <form id="inputs">
+        <label for="titre">Titre : </label>
+        <input id="titre" type="text">
+        <label for="annee">Année : </label>
+        <input id="annee" type="number">
+        <label for="auteur">Auteur : </label>
+        <input id="auteur" type="text">
+        <button id="save">Save</button>
+    </form>
+
+    <button type="button" id="ajouter">Ajouter</button>
+
+    <div id="filter">
+        <p>Filtrer par:</p>
+        <select name="filter" id="filt">
+            <option value="choisir" disabled selected>Choisir</option>
+            <option id="sortYrs" value="Annee">Année</option>
+            <option id="sortName" value="titre">Titre</option>
+        </select>
+    </div>
+
+    <table class="js-sort-table">
+        <thead>
+            <tr>
+                <th id="names">Titre</th>
+                <th id="yrs">Année</th>
+                <th>Auteur</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="table">
+
+        </tbody>
+    </table>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
